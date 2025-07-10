@@ -4,8 +4,8 @@ import time
 import Posicion
 
 
-Emulador = 'E:\\Emulador\\visualboyadvance-m.exe' # cambiar dependiendo del pc
-Rom = 'E:\\Emulador\\rom\\PokemonRuby.gba' # cambiar dependiendo del pc
+Emulador = 'E:\\Emulador-GBA\\visualboyadvance-m.exe' # cambiar dependiendo del pc
+Rom = 'E:\\Emulador-GBA\\juegos\\PokemonRuby.gba' # cambiar dependiendo del pc
 
 # Verificamos si la ruta donde se encuentra el emulador es correcta o no
 def verificarRutas(Emulador, Rom):

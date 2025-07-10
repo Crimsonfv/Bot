@@ -3,8 +3,8 @@ import json
 import os
 from datetime import datetime
 
-RutaJson = 'C:\\Users\\guill\\WorkSpace\\test\\EmuladorPosicion\\posiciones.json' # cambiar dependiendo del pc
-RutaCapturas = 'C:\\Users\\guill\\WorkSpace\\test\\Capturas\\CapturasEmulador' # cambiar dependiendo del pc
+RutaJson = 'C:\\Users\\guill\\WorkSpace\\Bot\\EmuladorPosicion\\posiciones.json' # cambiar dependiendo del pc
+RutaCapturas = 'C:\\Users\\guill\\WorkSpace\\Bot\\Capturas\\CapturasEmulador' # cambiar dependiendo del pc
 
 def PantallasoEmulador():
     # Verificar si existe el archivo JSON
@@ -38,9 +38,8 @@ def PantallasoEmulador():
             # Puedes ajustar el tamaño (300x300) según tus necesidades
             img = pyautogui.screenshot(region=(x, y, 300, 300))
             
-            # Generar timestamp para el nombre del archivo
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            nombre_archivo = f'{RutaCapturas}\\{nombre}_{timestamp}.png'
+            # Nombre del archivo sin timestamp - solo el nombre del emulador
+            nombre_archivo = f'{RutaCapturas}\\{nombre}.png'
             
             # Guardar la imagen
             img.save(nombre_archivo)
